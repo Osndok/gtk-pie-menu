@@ -19,7 +19,7 @@ gtkpiemenu.o: gdkaddons.h gtkpiemenu.h gtkpiemenu.c gtkaddons.h
 gtkaddons.o: gtkaddons.c gtkaddons.h
 
 clean:
-	-rm *~ *.o gtk-taste-pie gtk-test-addon TAGS
+	-rm -f *~ *.o gtk-taste-pie gtk-test-addon TAGS
 
 tags: TAGS
 
