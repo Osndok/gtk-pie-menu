@@ -1,0 +1,3 @@
+*.o
+/gtk-taste-pie
+/gtk-test-addon
