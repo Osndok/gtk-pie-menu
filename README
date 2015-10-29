@@ -1,0 +1,107 @@
+                       Pie Menus for Gtk+ 1.2.x
+                    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+              All we are saying - is give pie a chance.
+
+
+                            Why Pie Menus?
+                          -=-=-=-=-=-=-=-=-
+
+  You may ask whether there is any reason for those strangely shaped
+menus with exotic control. Are pie menus yet another step in direction
+of unstandardised applications with behaviour no one knows how to use?
+
+  In my point of view, pie menu is alternative to usual layout of
+menus, alternative which should be standardised in near future. Why? -
+because they are faster, faster in everyday work with your mouse.
+When you pop up old-style menu, you have _always_ to synchronise your
+eyes with mouse pointer and menu items and this cost time and your
+attention. 
+
+  But when you know your way through pie menu everything is a little
+bit simpler - just few quick mouse motions - (for example "left", "up")
+and since direction (not position) of these motions is important you
+do not lose you time while trying to put your mouse pointer over right
+menu item.
+
+
+              Using GtkPieMenu menu in Gtk+ applications
+           -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+  GtkPieMenu is offspring of GtkMenu in Gtk+ widget class hierarchy.
+Thus you use similar functions while working with GtkPieMenu.
+
+  Essential functions:
+ 
+GtkWidget* gtk_pie_menu_new (void);
+
+  Creates new pie menu.
+
+  In fact you can use gtk_menu_append to append usual menu item to pie
+menu. But usually you want to specify position of menu item in pie
+menu (its direction)
+
+void gtk_pie_menu_put_with_compass (GtkPieMenu          *menu,
+                                    GtkWidget           *child,
+                                    GtkPieCompass        compass);
+
+  gtk_pie_menu_put_with_compass put menu item in desired direction -
+see gtkpiemenu.h for predefined constants (GTK_PIE_N for north etc). 
+
+  And finally there are two functions for displaying pie menu (I
+suppose that you want to get something displayed):
+
+  
+void gtk_menu_popup (GtkMenu *menu,......)
+void gtk_pie_menu_popup (GtkPieMenu            *menu,
+                         guint                  button,
+                         guint32                activate_time);
+
+  gtk_menu_popup is well known function which pops up GtkPieMenu in
+old (and boring) layout. Using gtk_pie_menu_popup you pop up menu as a
+real pie menu. In your application you can take an advantage of these
+two functions and let user chose prefered menu style (I bet that he
+choose nifty GtkPieMenus :)
+
+  [recommendation]: For pie menu beginners it is easy to confuse directions -
+because their hand is not yet trained for pie menus. It is easy to distinguish
+between eight directions (N, NE, E,...) but you have to be (Old) Surehand to
+always direct your hand in right direction when there are sixteen menu items
+per pie menu. Also IMHO it is not always wise to use pie menu to control
+actions which can not be easily reverted. Even though I like pie menus I think
+that it is not best idea to control nuclear power station with pie menus.
+
+
+                            Pie Menu Links
+                         -=-=-=-=-=-=-=-=-=-
+
+Pie Window Manager              
+                                                 http://www.crynwr.com/piewm/
+ 
+Dob Hopkin's page about pie menus
+                              http://art.net/~hopkins/Don/piemenus/index.html
+
+
+                              Thanks to:
+                             -=-=-=-=-=-=
+
+Richard Stallman & The Free Software Foundation
+        for GNU, GPL, FSF, Emacs, gcc, gdb, etags ....
+
+Peter Mattis, The GTK Team and Gimp people
+        for GTK and Gimp.
+
+Linus Torvalds 
+        for (what a surprise) Linux kernel.
+
+XFree86 Team 
+        for XFree86.
+
+... and finally to my grand mamma for great pies, cakes,...  :)
+
+
+------------------------------------------------------------
+Daniel Skarda <0rfelyus@ucw.cz>
+
+http://atrey.karlin.mff.cuni.cz/~0rfelyus/
+ftp://atrey.karlin.mff.cuni.cz/pub/local/0rfelyus/

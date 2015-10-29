@@ -1,0 +1,36 @@
+; TODO list in format suitable for Emacs Outline mode...
+
+* Near future
+
+** Deal with menu separators etc...
+
+** Pie Menu Title...
+
+** styles
+
+* Teach GtkItemFactory GtkPieMenu manners
+
+* new signal "wrong-direction"
+  
+  emit new signal (? "wrong-direction") which is emited when
+  user choose bad direction in invisible PieMenu
+
+  current solution: gdk_beeeeep
+
+* support Pie menus in as many programs as possible (gimp, gnome, trapas3d,..)
+  (and do not forget emacs, bash and wc) (/usr/bin/wc ...)
+
+* www page...
+
+* Persuade Gtk Team to incorporate following changes to Gtk
+
+** gtk_widget_set_uposition
+
+   rewrote gtk_widget_set_uposition code to handle also negative values -
+   gtk_window_set_win_position is really ugly hack
+
+** Better handling of window shapes
+
+   Other X11 calls should be supported (XShapeCombineRectangles,
+   XShapeCombineRegion,.. ) ... so some hidden desires (transparent pixmap in
+   GtkPieMenu -> title) could be easily satisfied.

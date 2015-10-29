@@ -1,0 +1,23 @@
+# style <name> [= <name>]
+# {
+#   <option>
+# }
+#
+# widget <widget_set> style <style_name>
+# widget_class <widget_class_set> style <style_name>
+
+style "pie-style"
+{
+ bg[PRELIGHT] = { 0.0, 0.0, 0.75 }
+ fg[NORMAL] = { 0, 0, 0 }
+ fg[PRELIGHT] = { 0.9, 0.9, 0.9 }
+}
+
+style "pie-area"
+{
+ bg[NORMAL] = { 0.99, 0.99, 0.99 }
+}
+
+widget "*PieMenu*" style "pie-style"
+widget "*EventBox*" style "pie-area"
+
